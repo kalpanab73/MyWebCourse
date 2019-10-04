@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basics of HTML, CSS and JavaScript</title>
+    <script>
+        function init(){
+            let arrayHobbies = ['Art', 'Cooking'];
+            let test = '<ul>';
+            
+            arrayHobbies.forEach(function(tempHobby){
+                test = test.concat('<li>').concat(tempHobby).concat('</li>');
+            })
+            test = test.concat('</ul>');
+
+            document.getElementById("name").innerHTML = 'Kalpana Bacon';
+            document.getElementById("hobbies").innerHTML = test;
+        }
+    </script>
+    <style>
+        div {
+            width : 300px;
+            padding: 10px;
+            border: 1px solid purple;
+            background-color: grey;
+            color: purple;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #name { text-align: center}
+        #hobbies {text-align: left}
+        
+        
+    </style>
+</head>
+<body onload = "init()">
+    <div id="name"></div>
+    <div id="hobbies"></div>
+</body>
+</html>
